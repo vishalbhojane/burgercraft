@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create unique burger designs with BurgerCraft.">
+    <meta property="og:url" content="https://burgercraft.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/229170-512.png">
+    <title>BurgerCraft - Hamburger Maker By Vishal Bhojane</title>
+    <link href="assets/img/229170.png" rel="shortcut icon">
+    <link href="/assets/styles/style.css" rel="stylesheet">
+    <style class="hamburger-styles">.hamburger > div{display:flex;flex-shrink:0;flex-direction:column;justify-content:space-between;align-items:flex-start;cursor:pointer;width:30px;height:28px} .hamburger > div > div{flex-shrink:0;border-radius:2px;background:#000;width:30px;height:4px} .hamburger > div,.hamburger > div > div{font-size:0;line-height:0} .hamburger > div > div:first-child,.hamburger > div > div:last-child{transform-origin:2px 50%;transition:transform 0.33s ease-in-out,width 0.33s ease-in-out} .hamburger > div > div:nth-child(2){transition:width 0.33s ease-in-out} .hamburger--active .hamburger > div > div:first-child,.hamburger--active .hamburger > div > div:last-child{width:39px} .hamburger--active .hamburger > div > div:first-child{transform:rotate(43deg)} .hamburger--active .hamburger > div > div:last-child{transform:rotate(-43deg)} .hamburger--active .hamburger > div > div:nth-child(2){width:0}</style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>BurgerCraft</h1>
+        </div>
+    </header>
+    <main>
+        <section class="preview">
+            <div class="container">
+                <h2>Live Preview</h2>
+                <div class="hamburger-container">
+                    <div class="hamburger">
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="settings">
+            <div class="container">
+                <h2>Settings (Use Even values [2,4,6...] for better roundoff)</h2>
+                <div class="input-group">
+                    <div class="input-wrap">
+                        <label for="ham-width">width</label>
+                        <input id="ham-width" name="hamburger width" type="number" value="30">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="ham-height">height</label>
+                        <input id="ham-height" name="hamburger height" type="number" value="28">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="ham-thick">thick</label>
+                        <input id="ham-thick" name="hamburger thickness" type="number" value="4">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="ham-radius">radius</label>
+                        <input id="ham-radius" name="hamburger radius" type="number" value="2">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="ham-color">color</label>
+                        <input id="ham-color" name="hamburger color" type="text" value="#000" pattern="#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copy">
+            <div class="container">
+                <h2>Copy</h2>
+                <div class="cta-wrap">
+                    <button onclick="copyToClipboard('.hamburger-container', 'Markup')">Markup</button>
+                    <button onclick="copyToClipboard('.hamburger-styles', 'Styles')">Styles</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p class="footer-text">Made With <span>&#10084;</span> By <a href="mailto:bhojanevishal72@gmail.com">Vishal Bhojane</a></p>
+        </div>
+    </footer>
+    <script src="/assets/script/app.js"></script>
+</body>
+
+</html>
